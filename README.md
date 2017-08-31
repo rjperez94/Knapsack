@@ -13,10 +13,10 @@
 
 ## Linking the jUnit library
 
-8. Right click on your `Java Project` --> `Build Path` --> `Add Libraries`
-9. Choose `jUnit` --> `Next`
-10. Choose `jUnit 4` as the version
-11. Click `Finish`
+9. Right click on your `Java Project` --> `Build Path` --> `Add Libraries`
+10. Choose `jUnit` --> `Next`
+11. Choose `jUnit 4` as the version
+12. Click `Finish`
 
 ## Running the program
 
