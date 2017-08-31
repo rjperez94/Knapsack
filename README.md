@@ -9,6 +9,7 @@
 5. Put directory where you downloaded ZIP in `From archive file`
 6. Put `ProjectName/src` in `Into folder`
 7. Click `Finish`
+8. <strong>You must now change the directory names for each one to your preferred name as Java does not recognise `-` as valid identifiers. You need to subsequently do a `package <nameOfDir>` at the top of each `.java` file</strong> 
 
 ## Linking the jUnit library
 
