@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import brute.force.ItemBF;
+import brute.force.Knapsack0NBF;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,7 +15,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class Testing {
+public class TestingBF {
 	// helper vars
 	private static int currentHashID = 1;
 	private static HashMap<Integer, ArrayList<Long>> times = new HashMap<>();
@@ -57,10 +59,10 @@ public class Testing {
 		
 		int N = 100;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -76,10 +78,10 @@ public class Testing {
 		
 		int N = 200;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -95,10 +97,10 @@ public class Testing {
 		
 		int N = 300;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -114,10 +116,10 @@ public class Testing {
 		
 		int N = 400;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -133,10 +135,10 @@ public class Testing {
 		
 		int N = 500;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -152,10 +154,10 @@ public class Testing {
 		
 		int N = 600;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemBF> list = new ArrayList<>();
+			ItemBF red = new ItemBF("red", 300, 154);
+			ItemBF blue = new ItemBF("blue", 700, 540);
+			ItemBF green = new ItemBF("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -179,7 +181,7 @@ public class Testing {
 //			list.add(blue);
 //			list.add(green);
 //
-//			Knapsack0NBF kpbf = new Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
+//			brute.force.Knapsack0NBF kpbf = new brute.force.Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
 //			times.get(currentHashID).add(kpbf.runningTime());
 //		}
 //	}
@@ -198,7 +200,7 @@ public class Testing {
 //			list.add(blue);
 //			list.add(green);
 //
-//			Knapsack0NBF kpbf = new Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
+//			brute.force.Knapsack0NBF kpbf = new brute.force.Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
 //			times.get(currentHashID).add(kpbf.runningTime());
 //		}
 //	}
@@ -217,7 +219,7 @@ public class Testing {
 //			list.add(blue);
 //			list.add(green);
 //
-//			Knapsack0NBF kpbf = new Knapsack0NBF(N, N*900, list, new int[] { N, N, N });
+//			brute.force.Knapsack0NBF kpbf = new brute.force.Knapsack0NBF(N, N*900, list, new int[] { N, N, N });
 //			times.get(currentHashID).add(kpbf.runningTime());
 //		}
 //	}
@@ -236,7 +238,7 @@ public class Testing {
 //			list.add(blue);
 //			list.add(green);
 //
-//			Knapsack0NBF kpbf = new Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
+//			brute.force.Knapsack0NBF kpbf = new brute.force.Knapsack0NBF(N, N*100, list, new int[] { N, N, N });
 //			times.get(currentHashID).add(kpbf.runningTime());
 //		}
 //	}

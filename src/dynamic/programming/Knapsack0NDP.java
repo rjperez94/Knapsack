@@ -1,3 +1,5 @@
+package dynamic.programming;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,14 +7,14 @@ public class Knapsack0NDP {
 	private int n;
 	private int capacity;
 	
-	private List<Item> items;
+	private List<ItemDP> items;
 	private int[][] matrix;
 	private int[][] keep;
 	
 	private long startTime;
 	private long endTime;
 
-	public Knapsack0NDP(int n, int capacity, List<Item> initialItems, int[] initialCounts) throws IllegalArgumentException {
+	public Knapsack0NDP(int n, int capacity, List<ItemDP> initialItems, int[] initialCounts) throws IllegalArgumentException {
 		checkConsistent(n,capacity,initialItems,initialCounts);
 		
 		this.capacity = capacity;
@@ -24,7 +26,7 @@ public class Knapsack0NDP {
 		//printTable();
 	}
 
-	private void checkConsistent(int n, int capacity, List<Item> initialItems, int[] initialCounts) {
+	private void checkConsistent(int n, int capacity, List<ItemDP> initialItems, int[] initialCounts) {
 		if (n < 1) throw new IllegalArgumentException("N must be >=1");
 		if (capacity < 0) throw new IllegalArgumentException("Knapsack capacity must be >=0");
 		if (initialItems.size() < 1) throw new IllegalArgumentException("There must at least be 1 item type");
@@ -34,7 +36,7 @@ public class Knapsack0NDP {
 			if(initialItems.get(i) == null) throw new IllegalArgumentException("Cannot have NULL item types");
 	}
 
-	private void initialiseDependencies(List<Item> initialItems, int[] initialCounts) {
+	private void initialiseDependencies(List<ItemDP> initialItems, int[] initialCounts) {
 		startTime = System.currentTimeMillis();
 		
 		this.items = new ArrayList<>();
@@ -99,10 +101,10 @@ public class Knapsack0NDP {
 	}
 
 	public static void main(String[] args) {
-		List<Item> list = new ArrayList<>();
-		Item red = new Item("red", 3, 54);
-		Item blue = new Item("blue", 70, 154);
-		Item green = new Item("green", 30, 4);
+		List<ItemDP> list = new ArrayList<>();
+		ItemDP red = new ItemDP("red", 3, 54);
+		ItemDP blue = new ItemDP("blue", 70, 154);
+		ItemDP green = new ItemDP("green", 30, 4);
 		list.add(red);
 		list.add(blue);
 		list.add(green);

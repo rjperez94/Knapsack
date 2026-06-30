@@ -1,3 +1,5 @@
+package brute.force;
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,14 +8,14 @@ import java.util.List;
 public class Knapsack0NBF {
 	private int n;
 	private int capacity;
-	private List<Item> items;
+	private List<ItemBF> items;
 	private int[] counts;
 	private List<Solution> solutions = new ArrayList<>();
 	
 	private long startTime;
 	private long endTime;
 
-	public Knapsack0NBF(int n, int capacity, List<Item> initialItems, int[] initialCounts) throws IllegalArgumentException {
+	public Knapsack0NBF(int n, int capacity, List<ItemBF> initialItems, int[] initialCounts) throws IllegalArgumentException {
 		checkConsistent(n,capacity,initialItems,initialCounts);
 		
 		this.n = n;
@@ -28,7 +30,7 @@ public class Knapsack0NBF {
 		System.out.println(getBest().toString());
 	}
 	
-	private void checkConsistent(int n, int capacity, List<Item> initialItems, int[] initialCounts) {
+	private void checkConsistent(int n, int capacity, List<ItemBF> initialItems, int[] initialCounts) {
 		if (n < 1) throw new IllegalArgumentException("N must be >=1");
 		if (capacity < 0) throw new IllegalArgumentException("Knapsack capacity must be >=0");
 		if (initialItems.size() < 1) throw new IllegalArgumentException("There must at least be 1 item type");
@@ -55,7 +57,7 @@ public class Knapsack0NBF {
 		}
 	}
 	
-	private Point computeValueAndWeight(List<Item> items, int[] itemCounts) {
+	private Point computeValueAndWeight(List<ItemBF> items, int[] itemCounts) {
 		int value = 0;
 		int weight = 0;
 		
@@ -80,10 +82,10 @@ public class Knapsack0NBF {
 	}
 
 	public static void main(String[] args) {
-		List<Item> list = new ArrayList<>();
-		Item red = new Item("red", 3,54);
-		Item blue = new Item("blue", 70,154);
-		Item green = new Item("green", 30,4);
+		List<ItemBF> list = new ArrayList<>();
+		ItemBF red = new ItemBF("red", 3,54);
+		ItemBF blue = new ItemBF("blue", 70,154);
+		ItemBF green = new ItemBF("green", 30,4);
 		list.add(red);
 		list.add(blue);
 		list.add(green);

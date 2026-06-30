@@ -1,30 +1,32 @@
+package graph.search;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Node implements Comparable<Node>{
 	public int h;
-    List<Item> taken;
+    List<ItemGS> taken;
     public double bound;
     public double value;
     public double weight;
     
     public Node() {
-       taken = new ArrayList<Item>();
+       taken = new ArrayList<ItemGS>();
     }
     
     public Node(Node parent) {
        h = parent.h + 1;
-       taken = new ArrayList<Item>(parent.taken);
+       taken = new ArrayList<ItemGS>(parent.taken);
        bound = parent.bound;
        value = parent.value;
        weight = parent.weight;
     }
     
-    public void computeBound(List<Item> items, int capacity) {
+    public void computeBound(List<ItemGS> items, int capacity) {
        int i = h;
        double w = weight;
        bound = value;
-       Item item;
+       ItemGS item;
        do {
           item = items.get(i);
           if (w + item.weight > capacity) break;

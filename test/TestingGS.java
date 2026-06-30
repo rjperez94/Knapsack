@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import graph.search.ItemGS;
+import graph.search.Knapsack0NGS;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,7 +15,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class Testing {
+public class TestingGS {
 	// helper vars
 	private static int currentHashID = 1;
 	private static HashMap<Integer, ArrayList<Long>> times = new HashMap<>();
@@ -57,10 +59,10 @@ public class Testing {
 		
 		int N = 10;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -76,10 +78,10 @@ public class Testing {
 		
 		int N = 20;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -95,10 +97,10 @@ public class Testing {
 		
 		int N = 30;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -114,10 +116,10 @@ public class Testing {
 		
 		int N = 40;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -133,10 +135,10 @@ public class Testing {
 		
 		int N = 50;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -152,10 +154,10 @@ public class Testing {
 		
 		int N = 60;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 154);
-			Item blue = new Item("blue", 700, 540);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 154);
+			ItemGS blue = new ItemGS("blue", 700, 540);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -171,10 +173,10 @@ public class Testing {
 		
 		int N = 70;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 750);
-			Item blue = new Item("blue", 700, 941);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 750);
+			ItemGS blue = new ItemGS("blue", 700, 941);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -190,10 +192,10 @@ public class Testing {
 		
 		int N = 80;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 750);
-			Item blue = new Item("blue", 700, 941);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 750);
+			ItemGS blue = new ItemGS("blue", 700, 941);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -209,10 +211,10 @@ public class Testing {
 		
 		int N = 90;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 750);
-			Item blue = new Item("blue", 700, 941);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 750);
+			ItemGS blue = new ItemGS("blue", 700, 941);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);
@@ -228,10 +230,10 @@ public class Testing {
 		
 		int N = 100;
 		for (int i = 0; i < LOOP; i++) {
-			List<Item> list = new ArrayList<>();
-			Item red = new Item("red", 300, 750);
-			Item blue = new Item("blue", 700, 941);
-			Item green = new Item("green", 930, 854);
+			List<ItemGS> list = new ArrayList<>();
+			ItemGS red = new ItemGS("red", 300, 750);
+			ItemGS blue = new ItemGS("blue", 700, 941);
+			ItemGS green = new ItemGS("green", 930, 854);
 			list.add(red);
 			list.add(blue);
 			list.add(green);

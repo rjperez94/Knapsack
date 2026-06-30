@@ -1,3 +1,5 @@
+package brute.force;
+
 import java.util.Comparator;
 
 public class Solution {
