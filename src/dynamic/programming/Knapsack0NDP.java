@@ -1,9 +1,12 @@
 package dynamic.programming;
 
+import abst.Knapsack;
+import ecs100.UI;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Knapsack0NDP {
+public class Knapsack0NDP extends Knapsack {
 	private int n;
 	private int capacity;
 	
@@ -14,16 +17,17 @@ public class Knapsack0NDP {
 	private long startTime;
 	private long endTime;
 
-	public Knapsack0NDP(int n, int capacity, List<ItemDP> initialItems, int[] initialCounts) throws IllegalArgumentException {
+	public Knapsack0NDP(UI ui, int n, int capacity, List<ItemDP> initialItems, int[] initialCounts) throws IllegalArgumentException {
+		super(ui);
 		checkConsistent(n,capacity,initialItems,initialCounts);
-		
+
 		this.capacity = capacity;
 		this.n = n;
 		
 		initialiseDependencies(initialItems, initialCounts);		
 		solve();
 		printItems();
-		//printTable();
+		printTable();
 	}
 
 	private void checkConsistent(int n, int capacity, List<ItemDP> initialItems, int[] initialCounts) {
@@ -67,47 +71,37 @@ public class Knapsack0NDP {
 			}
 		}
 	}
-	
+
 	private void printItems() {
 		// backtracking
 		int totWeight = 0;
-		System.out.printf("Items Chosen\n%s%7s%7s\n", "Item", "Weight", "Profit");
+		printf("Items Chosen\n%s%7s%7s\n", "Item", "Weight", "Profit");
 		int K = capacity;
 		for (int i = items.size(); i >= 1; i--) {
 			if (keep[i][K] == 1) {
-				System.out.printf("%s%7d%7d\n", items.get(i - 1).label, items.get(i - 1).weight, items.get(i - 1).value);
+				printf("%s%7d%7d\n", items.get(i - 1).label, items.get(i - 1).weight, items.get(i - 1).value);
 				totWeight+=items.get(i - 1).weight;
 				K -= items.get(i - 1).weight;
 			}
 		}
-		
-		System.out.println("Knapsack weight  : " + totWeight);
-		System.out.println("Maximum profit : " + matrix[items.size()][capacity]);
+
+		println("Knapsack weight  : " + totWeight);
+		println("Maximum profit : " + matrix[items.size()][capacity]);
 		endTime = System.currentTimeMillis();
 	}
 
-//	private void printTable() {
-//		// Printing the matrix
-//		for (int[] rows : matrix) {
-//			for (int col : rows) {
-//				System.out.format("%5d", col);
-//			}
-//			System.out.println();
-//		}
-//	}
+	private void printTable() {
+		// Printing the matrix
+		println("Printing the matrix");
+		for (int[] rows : matrix) {
+			for (int col : rows) {
+				printf("%5d", col);
+			}
+			printf("\n");
+		}
+	}
 	
 	public long runningTime() {
 		return endTime - startTime;
-	}
-
-	public static void main(String[] args) {
-		List<ItemDP> list = new ArrayList<>();
-		ItemDP red = new ItemDP("red", 3, 54);
-		ItemDP blue = new ItemDP("blue", 70, 154);
-		ItemDP green = new ItemDP("green", 30, 4);
-		list.add(red);
-		list.add(blue);
-		list.add(green);
-		new Knapsack0NDP(200, 200, list, new int[]{10,10,10});
 	}
 }

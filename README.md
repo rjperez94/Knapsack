@@ -11,12 +11,17 @@
 7. Click `Finish`
 8. <strong>You must now change the directory names for each one to your preferred name as Java does not recognise `-` as valid identifiers. You need to subsequently do a `package <nameOfDir>` at the top of each `.java` file</strong> 
 
-## Linking the jUnit library
+### Linking the jUnit library
 
 9. Right click on your `Java Project` --> `Build Path` --> `Add Libraries`
 10. Choose `jUnit` --> `Next`
 11. Choose `jUnit 4` as the version
 12. Click `Finish`
+
+### Linking the UI Library
+
+13. Right click on your `Java Project` --> `Build Path` --> `Add External Archives`
+14. Select `ecs100.jar` and link it to the project. That JAR will be in the directory where you downloaded ZIP
 
 ## Running the program
 

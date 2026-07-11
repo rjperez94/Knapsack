@@ -67,7 +67,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -86,7 +86,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -105,7 +105,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -124,7 +124,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -143,7 +143,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -162,7 +162,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -181,7 +181,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -200,7 +200,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -219,7 +219,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}
@@ -238,7 +238,7 @@ public class TestingGS {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NGS kpgs = new Knapsack0NGS(N, N * 25, list, new int[] { N, N, N });
+			Knapsack0NGS kpgs = new Knapsack0NGS(null, N, N * 25, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpgs.runningTime());
 		}
 	}

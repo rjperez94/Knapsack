@@ -1,11 +1,13 @@
 package graph.search;
 
+import abst.Knapsack;
+import ecs100.UI;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class Knapsack0NGS {
+public class Knapsack0NGS extends Knapsack {
 	private int n;
 	private int capacity;
 	private List<ItemGS> items;
@@ -13,8 +15,9 @@ public class Knapsack0NGS {
 	private long startTime;
 	private long endTime;
 
-	public Knapsack0NGS(int n, int capacity, List<ItemGS> initialItems, int[] initialCounts)
+	public Knapsack0NGS(UI ui, int n, int capacity, List<ItemGS> initialItems, int[] initialCounts)
 			throws IllegalArgumentException {
+        super(ui);
 		checkConsistent(n, capacity, initialItems, initialCounts);
 
 		this.capacity = capacity;
@@ -30,14 +33,14 @@ public class Knapsack0NGS {
 			throw new IllegalArgumentException("N must be >=1");
 		if (capacity < 0)
 			throw new IllegalArgumentException("Knapsack capacity must be >=0");
-		if (initialItems.size() < 1)
+		if (initialItems.isEmpty())
 			throw new IllegalArgumentException("There must at least be 1 item type");
 		if (initialItems.size() != initialCounts.length)
 			throw new IllegalArgumentException("Item type does not match item counts");
 
-		for (int i = 0; i < initialItems.size(); i++)
-			if (initialItems.get(i) == null)
-				throw new IllegalArgumentException("Cannot have NULL item types");
+        for (ItemGS initialItem : initialItems)
+            if (initialItem == null)
+                throw new IllegalArgumentException("Cannot have NULL item types");
 	}
 
 	private void initialiseDependencies(List<ItemGS> initialItems, int[] initialCounts) {
@@ -53,7 +56,7 @@ public class Knapsack0NGS {
 	}
 
 	private Node solve() {
-		Collections.sort(items, ItemGS.byRatio());
+		items.sort(ItemGS.byRatio());
 
 		Node best = new Node();
 		Node root = new Node();
@@ -97,29 +100,18 @@ public class Knapsack0NGS {
 	}
 
 	private void printItems(Node node) {
-		System.out.printf("Items Chosen\n%s%7s%7s\n", "Item", "Weight", "Profit");
+		printf("Items Chosen\n%s%7s%7s\n", "Item", "Weight", "Profit");
 		for (int i = 0; i < node.taken.size(); i++) {
-			System.out.printf("%s%7.0f%7.0f\n", node.taken.get(i).label, node.taken.get(i).weight,
+			printf("%s%7.0f%7.0f\n", node.taken.get(i).label, node.taken.get(i).weight,
 					node.taken.get(i).value);
 		}
 
-		System.out.println("Knapsack weight  : " + node.weight);
-		System.out.println("Maximum profit : " + node.value);
+		println("Knapsack weight  : " + node.weight);
+		println("Maximum profit : " + node.value);
 		endTime = System.currentTimeMillis();
 	}
 	
 	public long runningTime() {
 		return endTime - startTime;
-	}
-
-	public static void main(String[] args) {
-		List<ItemGS> list = new ArrayList<>();
-		ItemGS red = new ItemGS("red", 3, 54);
-		ItemGS blue = new ItemGS("blue", 70, 154);
-		ItemGS green = new ItemGS("green", 30, 4);
-		list.add(red);
-		list.add(blue);
-		list.add(green);
-		new Knapsack0NGS(200, 200, list, new int[] { 10, 10, 10 });
 	}
 }

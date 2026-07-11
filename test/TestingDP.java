@@ -67,7 +67,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 10000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 10000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -86,7 +86,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 20000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 20000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -105,7 +105,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 30000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 30000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -124,7 +124,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 40000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 40000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -143,7 +143,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 50000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 50000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -162,7 +162,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 60000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 60000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -181,7 +181,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 70000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 70000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -200,7 +200,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 80000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 80000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -219,7 +219,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 90000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 90000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
@@ -238,7 +238,7 @@ public class TestingDP {
 			list.add(blue);
 			list.add(green);
 
-			Knapsack0NDP kpdp = new Knapsack0NDP(N, 100000, list, new int[] { N, N, N });
+			Knapsack0NDP kpdp = new Knapsack0NDP(null, N, 100000, list, new int[] { N, N, N });
 			times.get(currentHashID).add(kpdp.runningTime());
 		}
 	}
